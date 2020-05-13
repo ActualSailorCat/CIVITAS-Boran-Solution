@@ -1,0 +1,161 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Default" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Default</Configuration>
+    <Name>CIVITAS [ICON_GREATPERSON] Boran</Name>
+    <Guid>aa328530-b63c-4c88-b41c-51f9c6de52ed</Guid>
+    <ProjectGuid>ed6e81ac-49a7-4c54-93d1-221dce5b69d1</ProjectGuid>
+    <ModVersion>1</ModVersion>
+    <Teaser>Adds Boran to the Sassanid civilization.</Teaser>
+    <Description>Adds Boran to the Sassanid civilization.[NEWLINE][NEWLINE]LEADER — BORAN[NEWLINE]TRAIT: Restorer of the Race of the Gods[NEWLINE]Receive double the Envoys for completing city-state quests. Your cities receive +2 City Defense Strength and City Ranged Strength per city-state of which you are suzerain.[NEWLINE][NEWLINE]IMPROVEMENT: Diz[NEWLINE]Fort that yields +1 Production and +1 Culture. Ranged units exert Zone of Control when stationed on a Diz. Unlocks with the Defensive Tactics civic, and cannot be built adjacent to another Diz.[NEWLINE][NEWLINE]AGENDA: Bānbišnān Bānbišn[NEWLINE]Boran despises those who compete with her for city-states, and befriends those who build walls. She will attempt to curry favor with city-states.</Description>
+    <Authors>SailorCat, ChimpanG, Chrisy, p0kiehl, SeelingCat, TheCrazyScotsman, Digihuman</Authors>
+    <SpecialThanks>Pixie, Disco, Leugi</SpecialThanks>
+    <AffectsSavedGames>true</AffectsSavedGames>
+    <SupportsSinglePlayer>true</SupportsSinglePlayer>
+    <SupportsMultiplayer>true</SupportsMultiplayer>
+    <SupportsHotSeat>true</SupportsHotSeat>
+    <AssemblyName>CIVITAS Boran</AssemblyName>
+    <RootNamespace>CIVITAS Boran</RootNamespace>
+    <InGameActionData><![CDATA[<InGameActions><UpdateDatabase id="Boran"><Properties><LoadOrder>106</LoadOrder></Properties><File>Core/Leaders/Boran/CVS_Boran_GameDefines.sql</File><File>Core/Leaders/Boran/CVS_Boran_DynamicModifiers.sql</File><File>Core/Leaders/Boran/CVS_Boran_Traits_Vanilla.sql</File><File>Core/Leaders/Boran/CVS_Boran_Agenda.sql</File><File>Core/Leaders/Boran/CVS_Boran_UI.sql</File><File>Core/Leaders/Boran/CVS_Boran_AI.sql</File></UpdateDatabase><UpdateText id="Localization"><File>Core/Leaders/Boran/CVS_Boran_Text.xml</File></UpdateText><UpdateIcons id="Icons"><File>Icons/CVS_Boran_Icons.xml</File></UpdateIcons><UpdateArt id="ModArt"><File>(Mod Art Dependency File)</File></UpdateArt><UpdateDatabase id="Expansions"><Properties><LoadOrder>107</LoadOrder></Properties><Criteria>XP1 or XP2</Criteria><File>Core/Leaders/Boran/CVS_Boran_Expacs.sql</File></UpdateDatabase><UpdateColors id="Colors"><File>Core/Leaders/Boran/CVS_Boran_Colors.sql</File></UpdateColors><AddGameplayScripts id="Lua"><Properties><LoadOrder>106</LoadOrder></Properties><File>Core/Leaders/Boran/CVS_Boran_Script.lua</File></AddGameplayScripts></InGameActions>]]></InGameActionData>
+    <ActionCriteriaData><![CDATA[<ActionCriteria><Criteria id="XP1"><GameCoreInUse>Expansion1</GameCoreInUse></Criteria><Criteria id="XP2"><GameCoreInUse>Expansion2</GameCoreInUse></Criteria><Criteria id="XP1 or XP2"><GameCoreInUse>Expansion1,Expansion2</GameCoreInUse></Criteria></ActionCriteria>]]></ActionCriteriaData>
+    <FrontEndActionData><![CDATA[<FrontEndActions><UpdateDatabase id="Config"><Properties><LoadOrder>100</LoadOrder></Properties><File>Core/Leaders/Boran/CVS_Boran_Config.sql</File></UpdateDatabase><UpdateArt id="ModArt"><File>(Mod Art Dependency File)</File></UpdateArt><UpdateText id="Localization"><File>Core/Leaders/Boran/CVS_Boran_Text.xml</File></UpdateText><UpdateIcons id="Icons"><File>Icons/CVS_Boran_Icons.xml</File></UpdateIcons><UpdateColors id="Colors"><File>Core/Leaders/Boran/CVS_Boran_Colors.sql</File></UpdateColors></FrontEndActions>]]></FrontEndActionData>
+    <CompatibleVersions>1.2,2.0</CompatibleVersions>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Default' ">
+    <OutputPath>.</OutputPath>
+  </PropertyGroup>
+  <ItemGroup>
+    <None Include="CIVITAS Boran.Art.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Artdefs" />
+    <Folder Include="Assets" />
+    <Folder Include="Core" />
+    <Folder Include="Core\Leaders" />
+    <Folder Include="Core\Leaders\Boran" />
+    <Folder Include="Icons" />
+    <Folder Include="Materials" />
+    <Folder Include="Textures" />
+    <Folder Include="XLPs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Artdefs\Improvements.artdef">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Artdefs\Landmarks.artdef">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Artdefs\LeaderFallbacks.artdef">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Artdefs\Leaders.artdef">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Artdefs\StrategicView.artdef">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Assets\CVS_DIZ_Pomegranate.ast">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Assets\DIS_CVS_Diz_Bld_01.ast">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Assets\DIS_CVS_Diz_Bld_03.ast">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Assets\DIS_CVS_Diz_Bld_06.ast">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Assets\DIS_CVS_Diz_Bld_09.ast">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Assets\DIS_CVS_Diz_Bld_12.ast">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Assets\DIS_CVS_Diz_Bld_15.ast">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Assets\DIS_CVS_Diz_Bld_16.ast">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Assets\DIS_CVS_Diz_Bld_17.ast">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Assets\DIS_CVS_Diz_Bld_18.ast">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Assets\DIS_CVS_Diz_Bld_19.ast">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Assets\IMP_CVS_DIZ.ast">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Assets\IMP_CVS_DIZ_2.ast">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Core\Leaders\Boran\CVS_Boran_Agenda.sql">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Core\Leaders\Boran\CVS_Boran_AI.sql">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Core\Leaders\Boran\CVS_Boran_Colors.sql">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Core\Leaders\Boran\CVS_Boran_Config.sql">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Core\Leaders\Boran\CVS_Boran_DynamicModifiers.sql">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Core\Leaders\Boran\CVS_Boran_GameDefines.sql">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Core\Leaders\Boran\CVS_Boran_Expacs.sql">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Core\Leaders\Boran\CVS_Boran_Text.xml">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Core\Leaders\Boran\CVS_Boran_Traits_Vanilla.sql">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Core\Leaders\Boran\CVS_Boran_UI.sql">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Core\Leaders\Boran\CVS_Boran_Script.lua">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Icons\CVS_Boran_Icons.xml">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Materials\CVS_DIZ_Pomegranate_Material.mtl">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Materials\DIS_CVS_Diz_Adobe_Alt.mtl">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Materials\DIS_CVS_Diz_Adobe_Mat.mtl">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Textures\Moment_Infrastructure_CVS_Diz.dds">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Textures\Moment_Infrastructure_CVS_Diz.tex">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="XLPs\Atlas.xlp">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="XLPs\LeaderFallbacks.xlp">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="XLPs\tilebases.xlp">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="XLPs\UILeaders.xlp">
+      <SubType>Content</SubType>
+    </Content>
+  </ItemGroup>
+  <Import Project="$(MSBuildLocalExtensionPath)Civ6.targets" />
+</Project>
